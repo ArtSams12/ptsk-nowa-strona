@@ -1,0 +1,236 @@
+﻿/* =========================================
+   STYLE DLA STRONY PTSK
+========================================= */
+/* =========================================
+   TELEFONY (Ekrany do 767px)
+========================================= */
+@media (max-width: 767px) {
+
+    /* Tutaj wpisujesz co ma się zmienić na telefonie */
+
+    body {
+        font-size: 14px; /* Mniejsza czcionka tekstu dla wygody czytania */
+    }
+
+    h1, h2, .ptsk-primary-header {
+        font-size: 1.8rem; /* Zmniejszamy gigantyczne nagłówki */
+    }
+
+    .footer {
+        padding: 10px 0; /* Zmniejszamy odstępy w stopce, żeby nie marnować miejsca */
+    }
+}
+/* =========================================
+   TABLETY (Ekrany od 768px do 991px)
+========================================= */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Zmiany tylko dla tabletów */
+
+    h1, h2, .ptsk-primary-header {
+        font-size: 2.2rem; /* Średnia wielkość nagłówków */
+    }
+
+    .card-header {
+        font-size: 1.1rem;
+    }
+}
+/* 1. Elegancka czcionka z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap');
+
+/* 2. Główne tło i tekst na stronie */
+body {
+    background-color: #F4EDDA; /* Jasna sepia/pergamin */
+    color: #2b1b11; /* Bardzo ciemny brąz do zwykłego tekstu */
+}
+
+/* 3. Historyczna czcionka do wszystkich nagłówków */
+h1, h2, h3, h4, h5, p, .navbar-brand, .ptsk-primary-header {
+    font-family: 'Playfair Display', serif;
+    color: #764D29; /* Główny, ciemny brąz */
+}
+
+.ptsk-primary-header {
+    font-weight: bold;
+}
+
+/* 4. GŁÓWNE MENU NAWIGACYJNE */
+.menu-ptsk {
+    background-color: #764D29 !important; /* Tło paska: Ciemny brąz */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+    .menu-ptsk .navbar-brand {
+        color: #F4EDDA !important; /* Jasny tekst logo w menu */
+        font-size: 1.4rem;
+    }
+
+    .menu-ptsk .nav-link {
+        color: #F4EDDA !important; /* JASNY TEKST ZAKŁADEK (Poprawione!) */
+        font-weight: 500;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+    }
+
+        /* Reakcja na najechanie myszką i aktywna zakładka */
+        .menu-ptsk .nav-link:hover,
+        .menu-ptsk .nav-link.active {
+            color: #ffffff !important; /* Tekst robi się czysto biały */
+            border-bottom: 2px solid #BFA138; /* Złota linia */
+        }
+
+/* 5. ZŁOTE PRZYCISKI (klasa do wykorzystania w przyszłości) */
+.btn-historical {
+    background-color: #BFA138;
+    border-color: #A0852F;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+    .btn-historical:hover {
+        background-color: #A0852F;
+        color: white;
+    }
+
+/* 6. STOPKA STRONY */
+.footer, p1 {
+    background-color: #000000; /* Ciemny brąz z palety */
+    color: #ffffff; /* Jasny tekst */
+    padding: 20px 0;
+    margin-top: 50px;
+    
+}
+
+.flex-gallery {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+.flex-item {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 250px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    color: white;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+    .flex-item:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .flex-item h4 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+    .btn-secondary:hover {
+        background-color: var(--primary-color);
+        transform: translateY(-2px);
+    }
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+/* ============================================
+           CSS GRID - GALERIA ZDJĘĆ
+           ============================================ */
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.grid-item {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+    .grid-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+.grid-item-content {
+    padding: 1rem;
+}
+
+.grid-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+/* ANIMACJE I EFEKTY ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Hover effect na obrazkach */
+.grid-item img {
+    transition: var(--transition);
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
