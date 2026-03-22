@@ -234,3 +234,17 @@ section {
 .grid-item:hover img {
     transform: scale(1.1);
 }
+p2 {
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+:root {
+    /* Kolory */
+    --primary-color: #764D29; /* Twój główny, historyczny brąz PTSK */
+    --secondary-color: #5A3A1F; /* Ciemniejszy, głęboki brąz do stworzenia eleganckiego gradientu */
+    /* Kształty i efekty */
+    --border-radius: 10px; /* Delikatne, nowoczesne zaokrąglenie rogów (nie za ostre, nie za okrągłe) */
+    --transition: all 0.3s ease-in-out; /* Płynność animacji (np. gdy najedziesz myszką na kafelek) */
+    /* Cień (mały profesjonalny trik: cień jest lekko zabarwiony Twoim brązem, żeby pasował do strony!) */
+    --box-shadow: 0 8px 20px rgba(118, 77, 41, 0.15);
+}
